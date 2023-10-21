@@ -1,5 +1,5 @@
 #!/bin/bash
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/msg)
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Otros/msg)
 bar="$(msg -bar3)"
 [[ -e /etc/systemd/system/btkill.service ]] && systemctl restart btkill.service &>/dev/null
 tr=${id}
@@ -66,7 +66,7 @@ permited=$(curl -sSL "${link}/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot
   echo -e "\n\n\n\e[31m====================================================="
   echo -e "\e[31m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) FUE RECHAZADA!"
   echo -e "     $link No AUTORIZADA el ACCESO "
-  echo -e " SI DESEAS USAR EL BOTGEN CONTACTE A @ChumoGH"
+  echo -e " SI DESEAS USAR EL BOTGEN CONTACTE A @drowkid01"
   echo -e "\e[31m=====================================================\n\n\n\e[0m"
   [[ -e "/bin/ShellBot.sh" ]] && rm -f /bin/ShellBot.sh
     exit 1
@@ -75,8 +75,8 @@ permited=$(curl -sSL "${link}/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot
   clear
   echo -e "\n\n\n\e[32m====================================================="
   echo -e "\e[32m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) ESTA AUTORIZADA!"
-  echo -e "      Mediante  $link Autorida por @ChumoGH"
-  echo -e "      SI DESEAS USAR EL BOTGEN CONTACTE A @ChumoGH"
+  echo -e "      Mediante  $link Autorida por @drowkid01"
+  echo -e "      SI DESEAS USAR EL BOTGEN CONTACTE A @drowkid01"
   echo -e "\e[32m=====================================================\n\n\n\e[0m"
   CIDdir=/etc/ADM-db && [[ ! -d ${CIDdir} ]] && mkdir ${CIDdir}
   [[ -e /etc/nivbot ]] && { 
@@ -131,7 +131,7 @@ echo "TOKEN APLICADO EXITOSAMENTE"
 systemctl restart BotGen-server &>/dev/null
 }
 echo -e "$bar\n"
-echo -e " AGREGA NUEVO URL DE CATALOGO / OPCIONAL \n  https://shoppy.gg/@ChumoGH/  \n"
+echo -e " AGREGA NUEVO URL DE CATALOGO / OPCIONAL \n  https://shoppy.gg/@drowkid01/  \n"
 echo -e "$bar"
 read -p "TEXTO: " nmsg
 [[ -z $nmsg ]] && return || { 
@@ -175,7 +175,7 @@ if [[ ! $PIDGEN ]]; then
 [[ $bot_ini = @(s|S|y|Y) ]] && {
 
 	echo -e "[Unit]
-Description=BotGen Service by @ChumoGH
+Description=BotGen Service by @drowkid01
 After=network.target
 StartLimitIntervalSec=0
 
@@ -241,7 +241,7 @@ msg -bar
 echo -e "\033[1;33mDescargando archivos... ESPERE "
 msg -bar
 mkdir -p /root/update &>/dev/null
-wget -q --no-check-certificate -O $HOME/files.tar https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Code-BOT-Comandos/files.tar
+wget -q --no-check-certificate -O $HOME/files.tar https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Code-BOT-Comandos/files.tar
 [[ -d $HOME/update ]] && rm -rf $HOME/update/* || mkdir $HOME/update
 [[ -e $HOME/files.tar ]] && tar xpf $HOME/files.tar -C $HOME/update && rm -f $HOME/files.tar
 echo 999 > ${CIDdir}/limit
@@ -263,7 +263,7 @@ echo -ne "\033[1;31m[ ! ] RESTAUDANDO ADMINISTRADOR "
 [[ -e $HOME/limit ]] && mv $HOME/limit /etc/ADM-db/limit
 [[ -e $HOME/num-key.cont ]] && mv $HOME/num-key.cont /etc/ADM-db/num-key.cont
 ) && echo -e "\033[1;32m [OK]" || echo -e "\033[1;31m [FAIL]"
-[[ ! -e ${CIDdir}/resell ]] && echo "@ChumoGH" > ${CIDdir}/resell
+[[ ! -e ${CIDdir}/resell ]] && echo "@drowkid01" > ${CIDdir}/resell
 [[ ! -e $(cat < /etc/mpayu) ]] && echo "Paypal : chumogh@outlook.com" > /etc/mpayu && echo "593987072611" > /etc/numctc
  rm $HOME/lista-arq
  systemctl restart BotGen-server &>/dev/null
@@ -317,7 +317,7 @@ unset PIDGEN
 PIDGEN=$(ps aux|grep -v grep|grep "BotGen.sh")
 if [[ ! $PIDGEN ]]; then
 echo -e "[Unit]
-Description=BotGen Service by @ChumoGH
+Description=BotGen Service by @drowkid01
 After=network.target
 StartLimitIntervalSec=0
 
@@ -475,7 +475,7 @@ read -p "IMG: " img
 [[ -z $MENSAJE ]] && MENSAJE="Hola, Mensale de Prueba del BotGen Generador!"
 		URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 		URG="https://api.telegram.org/bot$TOKEN/sendPhoto"
-		curl -s -X POST $URG -F chat_id=$ID -F photo="@$img" #-F caption="<code>New Script @ChumoGH</code>" #-F width="100" -F height="100"
+		curl -s -X POST $URG -F chat_id=$ID -F photo="@$img" #-F caption="<code>New Script @drowkid01</code>" #-F width="100" -F height="100"
 		curl -s -X POST $URL -d chat_id=$ID -d text="$(echo -e "$MENSAJE")" &>/dev/null
 #		clear
 		echo -e "@$img"
@@ -498,7 +498,7 @@ echo "Respaldando TOKEN y ADMINISTRADOR"
 [[ -e /etc/ADM-db/User-ID ]] && mv /etc/ADM-db/User-ID /root/User-ID
 [[ -e /etc/ADM-db/ress ]] && mv /etc/ADM-db/ress /root/ress
 [[ -e /etc/ADM-db/sources/costes ]] && mv /etc/ADM-db/sources/costes /root/costes
-[[ $(cat < /etc/ADM-db/resell) != "@ChumoGH" ]] && mv /etc/ADM-db/resell /root/resell
+[[ $(cat < /etc/ADM-db/resell) != "@drowkid01" ]] && mv /etc/ADM-db/resell /root/resell
 rm -rf /etc/ADM-db/sources/gerar_key && download
 }
 

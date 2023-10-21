@@ -4,7 +4,7 @@ coo=1
 IVAR="/etc/http-instas"
 SCPT_DIR="/etc/SCRIPT"
 rm -f gera*
-source <(curl -sSL https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/msg-bar/msg) > /dev/null
+#source <(curl -sSL https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/msg-bar/msg) > /dev/null
 #!/bin/bash
 
 # menu maker (opciones 1, 2, 3,.....)

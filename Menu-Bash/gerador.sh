@@ -4,7 +4,7 @@ unset readvalue
 [[ ! -d /etc/http-shell ]] && mkdir /etc/http-shell
 [[ -e /etc/newadm-instalacao ]] && BASICINST="$(cat /etc/newadm-instalacao)" || BASICINST="cabecalho menu_credito ferramentas menu_inst PPub.py usercodes payloads ssl paysnd.sh verifica PDirect.py v-local.log PGet.py ultrahost menu POpen.py shadowsocks.sh fai2ban PPriv.py"
 IVAR="/etc/http-instas"
-source <(curl -sSL https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/msg) >/dev/null
+source <(curl -sSL https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Otros/msg) >/dev/null
 #!/bin/bash
 # menu maker (opciones 1, 2, 3,.....)
 flech='➮' cOlM='⁙' && TOP='‣' && TTini='=====>>►► 🐲' && cG='/c' && TTfin='🐲 ◄◄<<=====' && TTcent='💥' && RRini='【  ★' && RRfin='★  】' && CHeko='✅' && ScT='🛡️' && FlT='⚔️' && BoLCC='🪦' && ceLL='🧬' && aLerT='⚠️' && _kl1='ghkey' && lLaM='🔥' && pPIniT='∘' && bOTg='🤖' && kL10='tc' && rAy='⚡' && tTfIn='】' && TtfIn='【' tTfLe='►' && am1='/e' && rUlq='🔰' && h0nG='🍄' && lLav3='🗝️' && m3ssg='📩' && pUn5A='⚜' && p1t0='•' nib="${am1}${kL10}"
@@ -201,7 +201,7 @@ del() {
 
 [[ -d /bin/ejecutar ]] && {
     [[ ! -e /etc/cghkey ]] && rm -rf /etc/adm-lite
-    [[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/msg
+    [[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Otros/msg
 } || mkdir /bin/ejecutar
 cor[0]="\033[0m"
 cor[1]="\033[1;34m"
@@ -431,7 +431,7 @@ fix_key() {
     msg -bar && echo -ne "$(msg -verd "apt update -y &&") $(msg -aqua "apt upgrade -y &&\n") " && msg -bra "\033[7;49;35m wget -q https://raw.githubusercontent.com/ChumoGH/ScriptCGH/main/setup && chmod 777 setup && ./setup --install"
     msg -bar
     [[ -e /etc/menu_numito ]] && menumito="$(cat /etc/menu_numito)" || menumito="https://t.me/ChumoGH_bot"
-    [[ -z $vkey ]] && vkey="@ChumoGH"
+    [[ -z $vkey ]] && vkey="@drowkid01"
     echo -e " ${ceLL} Soporte : Ubuntu 14.04 - 16.04 - 18.04 - 20.04 - 21.04 - 22.04\n         S.O PREFERENTE 18.04"
     echo -e " Verificada: $vkey ${ScT} RESELLER ACTUAL : $nomkey" | pv -qL 80
     msg -bar
@@ -646,7 +646,7 @@ bot_menu() {
     ) && echo -e "\033[1;32m [OK]" || echo -e "\033[1;31m [FAIL]"
     rm -rf /etc/ADM-db
     CIDdir=/etc/ADM-db && [[ ! -d ${CIDdir} ]] && mkdir ${CIDdir}
-    [[ ! -e "${CIDdir}/confbot.sh" ]] && wget --no-check-certificate -O ${CIDdir}/confbot.sh https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Code-BOT-General/intBOT.sh &>/dev/null && chmod +rwx ${CIDdir}/confbot.sh
+    [[ ! -e "${CIDdir}/confbot.sh" ]] && wget --no-check-certificate -O ${CIDdir}/confbot.sh https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Code-BOT-General/intBOT.sh &>/dev/null && chmod +rwx ${CIDdir}/confbot.sh
     sed -i -e 's/\r$//' ${CIDdir}/confbot.sh
     source ${CIDdir}/confbot.sh && rm -f ${CIDdir}/confbot.sh
     bot_conf
@@ -761,7 +761,7 @@ dropIP() {
     unset PIDGEN
     if [[ -e /var/www/html/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot ]]; then
         echo -e "[Unit]
-Description=BotGen Service by @ChumoGH
+Description=BotGen Service by @drowkid01
 After=network.target
 StartLimitIntervalSec=0
 
@@ -805,7 +805,7 @@ menau() {
         figlet -f smslant "$(cat </etc/valkey)" | lolcat
         msg -bar
     } || {
-        figlet -p -f smslant "@ChumoGH" | lolcat
+        figlet -p -f smslant "@drowkid01" | lolcat
         msg -bar
     }
     [[ ! $PID_GEN ]] && PID_GEN="\033[0;35m[\033[0;31mDETENIDO\033[0;35m]" || PID_GEN="\033[0;35m[\033[0;36mWORKING\033[0;35m]"

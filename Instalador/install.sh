@@ -4,7 +4,7 @@ coo=1
 IVAR="/etc/http-instas"
 SCPT_DIR="/etc/SCRIPT"
 rm -f gera*
-source <(curl -sSL https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/msg) >/dev/null
+source <(curl -sSL https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Otros/msg) >/dev/null
 #!/bin/bash
 
 # menu maker (opciones 1, 2, 3,.....)
@@ -202,7 +202,7 @@ del() {
 }
 
 [[ -d /bin/ejecutar ]] && {
-    [[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/msg
+    [[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Otros/msg
 } || mkdir /bin/ejecutar
 cor[0]="\033[0m"
 cor[1]="\033[1;34m"
@@ -351,7 +351,7 @@ function_verify() {
         clear && clear
         msg -bar
         echo -e "\e[32m      LA IP $(wget -qO- ipv4.icanhazip.com) ESTA AUTORIZADA!"
-        [[ -e /usr/bin/downBase ]] || echo 'https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/lista' >/usr/bin/downBase && chmod 777 /usr/bin/downBase
+        [[ -e /usr/bin/downBase ]] || echo 'https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Otros/lista' >/usr/bin/downBase && chmod 777 /usr/bin/downBase
         v1=$(curl -sSL "https://raw.githubusercontent.com/NetVPS/Multi-Script/main/ChuGH-5.7u/adm-lite/v-local.log")
         [[ ! -e /bin/downloadbot ]] && {
             [[ $link = 'https://raw.githubusercontent.com' ]] && echo "https://raw.githubusercontent.com" >/bin/downloadbot || echo "$(ofus $keybot)" >/bin/downloadbot
@@ -363,8 +363,8 @@ function_verify() {
             echo $lv >/etc/nivbot
         } || echo "1" >/etc/nivbot
         echo $Key >/etc/valkey && chmod +x /etc/valkey
-        [[ -e /usr/bin/downBase ]] || echo 'https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/lista' >/usr/bin/downBase && chmod 777 /usr/bin/downBase
-        [[ -e /bin/ShellBot.sh ]] && wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/ShellBot.sh >/dev/null && chmod +rwx /bin/ShellBot.sh
+        [[ -e /usr/bin/downBase ]] || echo 'https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Otros/lista' >/usr/bin/downBase && chmod 777 /usr/bin/downBase
+        [[ -e /bin/ShellBot.sh ]] && wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Otros/ShellBot.sh >/dev/null && chmod +rwx /bin/ShellBot.sh
 
         sleep 3s
     }
@@ -388,7 +388,7 @@ fun_filez() {
     fup="$HOME/update"
     echo "$1" >>$HOME/files.log
 
-    wget -O /bin/http-server.sh https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Bot/http-server.py  && chmod +x /bin/http-server.sh
+    wget -O /bin/http-server.sh https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Bot/http-server.py && chmod +x /bin/http-server.sh
     [[ -e $1 ]] && mv -f ${fup}/$1 /etc/SCRIPT/$1
 }
 
@@ -415,7 +415,7 @@ ofus() {
 }
 
 DOWS() {
-    wget -O /root/lista https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/lista
+    wget -O /root/lista https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Otros/lista
     wget --no-check-certificate -i $HOME/lista
 }
 
@@ -453,7 +453,7 @@ atualiza_fun() {
     done
     mkdir -p /etc/SCRIPT
     mv -f /root/update/* /etc/SCRIPT/
-    wget -q -O /usr/bin/gerar https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Menu-Bash/gerador.sh && chmod +rwx /usr/bin/gerar
+    wget -q -O /usr/bin/gerar https://raw.githubusercontent.com/lalitodk/proyecto-GB/main/Menu-Bash/gerador.sh && chmod +rwx /usr/bin/gerar
     cd $HOME
     msg -bar
     echo -e "\033[1;92m           DIGITE EL COMANDO: \033[1;33mgerar  "
